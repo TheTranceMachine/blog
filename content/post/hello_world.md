@@ -34,7 +34,7 @@ I invite you to engage, ask questions, share your insights, and be an active par
 
 Buckle up, as we embark on this exciting journey through the world of software engineering!
 
-Feel free to reach out to me via [GitHub](https://github.com/TheTranceMachine) or [LinkedIn](https://twitter.com/gregorysmolin) to share your thoughts and ideas. Stay tuned for more exciting content, and happy coding!
+Feel free to reach out to me via [GitHub](https://github.com/TheTranceMachine) or [LinkedIn](https://linkedin.com/in/gregorysmolin) to share your thoughts and ideas. Stay tuned for more exciting content, and happy coding!
 
 Warm regards,
 Greg
