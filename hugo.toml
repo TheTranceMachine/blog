@@ -15,4 +15,20 @@ theme = "github-style"
   userStatusEmoji = "😀"
   favicon = "/images/github.png"
   location = "US"
-  enableGitalk = false
+  enableGitalk = true
+
+  [params.gitalk]
+    clientID = "***REMOVED***" 
+    clientSecret = "***REMOVED***" 
+    repo = "blog"
+    owner = "TheTranceMachine"
+    admin = "TheTranceMachine"
+    id = "location.pathname"
+    labels = "gitalk"
+    perPage = 15
+    pagerDirection = "last"
+    createIssueManually = true
+    distractionFreeMode = false
+  [[params.links]]
+    title = "Link"
+    href = "https://github.com/TheTranceMachine"
