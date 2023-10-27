@@ -1,0 +1,18 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = "TheTranceMachine's blog"
+theme = "github-style"
+
+[params]
+  author = "Greg Smolin"
+  description = "Software Engineering blog"
+  github = "TheTranceMachine"
+  linkedin = "gregorysmolin"
+  email = "grzegorz.smolin2@gmail.com"
+  keywords = "blog"
+  rss = false
+  lastmod = true
+  userStatusEmoji = "😀"
+  favicon = "/images/github.png"
+  location = "US"
+  enableGitalk = false
