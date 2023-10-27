@@ -18,8 +18,8 @@ theme = "github-style"
   enableGitalk = true
 
   [params.gitalk]
-    clientID = GITALK_ID
-    clientSecret = GITALK_SECRET 
+    clientID = "HUGO_GITALK_ID"
+    clientSecret = "HUGO_GITALK_SECRET"
     repo = "blog"
     owner = "TheTranceMachine"
     admin = "TheTranceMachine"
