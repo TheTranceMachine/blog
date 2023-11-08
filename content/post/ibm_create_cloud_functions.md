@@ -83,19 +83,19 @@ packages:
 
 7. Log in to your IBM Cloud instance in your terminal. You can find the command using The IBM Cloud UI and clicking the top right corner user icon, choosing the "Log in to CLI and API" option from the dropdown, and copying your login command.
 
-![Log_into_IBM_Cloud1.png](images/Log_into_IBM_Cloud1.png)
+![Log_into_IBM_Cloud1.png](../../images/Log_into_IBM_Cloud1.png)
 
-![Log_into_IBM_Cloud2.png](images/Log_into_IBM_Cloud2.png)
+![Log_into_IBM_Cloud2.png](../../images/Log_into_IBM_Cloud2.png)
 
 
 8. Select the namespace in your terminal. You can find the command by clicking through the menus on the left sidebar from The IBM Cloud UI.
 
-![Functions_Namespace_command1.png](images/Functions_Namespace_command1.png)
+![Functions_Namespace_command1.png](../../images/Functions_Namespace_command1.png)
 
-![Functions_Namespace_command2.png](images/Functions_Namespace_command2.png)
+![Functions_Namespace_command2.png](../../images/Functions_Namespace_command2.png)
 
 Follow the steps from the screen.
-![Functions_Namespace_command3.png](images/Functions_Namespace_command3.png)
+![Functions_Namespace_command3.png](../../images/Functions_Namespace_command3.png)
 
 9. Now you can deploy your function by running `npm run deploy` from the root of your project.
 
