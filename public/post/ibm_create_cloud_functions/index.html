@@ -18,7 +18,7 @@
 
     
     <meta name="description"
-  content="Introduction " />
+  content="Tutorial on how to create and deploy IBM Cloud function actions" />
 <meta name="keywords"
   content='blog' />
 <meta name="robots" content="noodp" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Create IBM Cloud Functions - TheTranceMachine&#39;s blog" />
 <meta name="twitter:description"
-  content="Introduction " />
+  content="Tutorial on how to create and deploy IBM Cloud function actions" />
 <meta name="twitter:site" content="https://example.org/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
@@ -38,7 +38,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Create IBM Cloud Functions - TheTranceMachine&#39;s blog">
 <meta property="og:description"
-  content="Introduction " />
+  content="Tutorial on how to create and deploy IBM Cloud function actions" />
 <meta property="og:url" content="https://example.org/post/ibm_create_cloud_functions/" />
 <meta property="og:site_name" content="Create IBM Cloud Functions" />
 <meta property="og:image"
@@ -182,9 +182,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      1 Words
-                    
-
+                    530 Words
+                    <span class="file-info-divider"></span>
+                    Reading time: 3 min
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
                     
@@ -194,7 +194,106 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><h1 id="introduction">Introduction</h1>
+                <article class="markdown-body entry-content container-lg"><h1 id="create-and-deploy-ibm-cloud-function-actions">Create and deploy IBM Cloud function actions</h1>
+<blockquote>
+<p>Important!</p>
+<p>IBM Cloud® Functions is deprecated. Existing Functions entities such as actions, triggers, or sequences will continue to run, but as of 28 December 2023, you can’t create new Functions entities. Existing Functions entities are supported until October 2024. Any Functions entities that still exist on that date will be deleted. For more information, see <a href="https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-dep-overview">Deprecation overview</a>.</p>
+<p>If you’re an existing IBM Cloud® Functions user, you can continue to use the service until it is no longer supported in October 2024.</p>
+<p>Clients are encouraged to migrate their Functions actions and triggers to IBM Cloud® Code Engine. Alternatively, clients might decide to host their code on VPC virtual instances or in IBM Cloud Kubernetes or OpenShift for IBM Cloud® clusters.</p>
+<p>See the following topics for documentation about migrating from IBM Cloud® Functions to Code Engine.</p>
+<p><a href="https://www.ibm.com/blog/migrating-cloud-functions-code-to-code-engine">Migrating Cloud Functions Code to Code Engine</a></p>
+<p><a href="https://cloud.ibm.com/docs/codeengine?topic=codeengine-fun-migrate">Migrating IBM Cloud Functions to Code Engine</a></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>If the above didn&rsquo;t discourage you and you have a valid reason to create your cloud functions outside of Code Engine then please continue reading.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Prerequisites:</p>
+<ol>
+<li>IBM Cloud account (pay-as-you go will do)</li>
+<li>Working knowledge of the terminal</li>
+</ol>
+</blockquote>
+</blockquote>
+<ol>
+<li>Initialize new node.js project</li>
+</ol>
+<pre tabindex="0"><code>npm init
+</code></pre><ol start="2">
+<li>Edit <code>package.json</code> and add the following:</li>
+</ol>
+<pre tabindex="0"><code>{
+  &#34;name&#34;: &#34;&lt;function name&gt;&#34;,
+  &#34;version&#34;: &#34;1.0.0&#34;,
+  &#34;main&#34;: &#34;main.js&#34;,
+  &#34;dependencies&#34;: {
+    &#34;axios&#34;: &#34;^1.6.0&#34;
+  }
+}
+</code></pre><ol start="3">
+<li>Run <code>npm install</code> in the root of the project. This will install <code>axios</code> dependency.</li>
+<li>Create <code>main.js</code> file in the root of the project and add the following example code:</li>
+</ol>
+<pre tabindex="0"><code>function main(params) {
+      var msg = &#39;You did not tell me who you are.&#39;;
+      if (params.name) {
+          msg = `Hello, ${params.name}!`
+       } else {
+          msg = `Hello, Functions on CodeEngine!`
+      }
+      return {
+          headers: { &#39;Content-Type&#39;: &#39;text/html; charset=utf-8&#39; },
+          body: `&lt;html&gt;&lt;body&gt;&lt;h3&gt;${msg}&lt;/h3&gt;&lt;/body&gt;&lt;/html&gt;`
+       }
+  }
+  
+  module.exports.main = main;
+</code></pre><ol start="5">
+<li>Create <code>manifest.yml</code> file in the root of the project and the following code:</li>
+</ol>
+<pre tabindex="0"><code>packages:
+    main-package:
+      version: 1.0
+      license: Apache-2.0
+      actions:
+        main:
+          function:main.js
+</code></pre><ol start="6">
+<li>Add the following code to <code>package.json</code> (It will be responsible for deploying the function to your IBM Cloud Functions instance).</li>
+</ol>
+<pre tabindex="0"><code>...
+&#34;scripts&#34;: {
+    &#34;deploy&#34;: &#34;ibmcloud fn deploy --manifest manifest.yml&#34;
+  }
+</code></pre><blockquote>
+<p>You can now use <code>npm run deploy</code> to deploy your function but it won&rsquo;t work as you require to be logged in to IBM Cloud instance in your terminal and point to the right Namespace of IBM Cloud Functions. Let&rsquo;s create both in the next steps.</p>
+</blockquote>
+<ol start="7">
+<li>Log in to your IBM Cloud instance in your terminal. You can find the command using The IBM Cloud UI and clicking the top right corner user icon, choosing the &ldquo;Log in to CLI and API&rdquo; option from the dropdown, and copying your login command.</li>
+</ol>
+<p><img src="/images/Log_into_IBM_Cloud1.png" alt="Log_into_IBM_Cloud1.png"></p>
+<p><img src="/images/Log_into_IBM_Cloud2.png" alt="Log_into_IBM_Cloud2.png"></p>
+<ol start="8">
+<li>Select the namespace in your terminal. You can find the command by clicking through the menus on the left sidebar from The IBM Cloud UI.</li>
+</ol>
+<p><img src="/images/Functions_Namespace_command1.png" alt="Functions_Namespace_command1.png"></p>
+<p><img src="/images/Functions_Namespace_command2.png" alt="Functions_Namespace_command2.png"></p>
+<p>Follow the steps from the screen.
+<img src="/images/Functions_Namespace_command3.png" alt="Functions_Namespace_command3.png"></p>
+<ol start="9">
+<li>
+<p>Now you can deploy your function by running <code>npm run deploy</code> from the root of your project.</p>
+</li>
+<li>
+<p>If the terminal response is <code>Success: Deployment completed successfully.</code> then go to IBM Cloud Function UI and click Actions from the left sidebar to see successfully deployed functions.</p>
+</li>
+</ol>
+<blockquote>
+<p>I recommend following the documentation at <a href="https://github.com/apache/openwhisk-wskdeploy">openwhisk-wskdeploy</a> to find out more about how to configure your manifest.yml.</p>
+</blockquote>
 </article>
               </div>
             </div>
