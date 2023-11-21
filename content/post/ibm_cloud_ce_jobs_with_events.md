@@ -147,14 +147,14 @@ Source - [Managing projects](https://cloud.ibm.com/docs/codeengine?topic=codeeng
     ``` 
 3. Add any environment variables to your project. In the above code we are using `process.env.API_KEY` therefore `API_KEY` has to be added into a Config Map as env. variable.
 
-    ![Code_engine_config_map1.png](../../images/../static/images/Code_engine_config_map1.png)
-    ![Code_engine_config_map2.png](../../images/../static/images/Code_engine_config_map2.png)
-    ![Code_engine_config_map3.png](../../images/../static/images/Code_engine_config_map3.png)
+    ![Code_engine_config_map1.png](../../images/Code_engine_config_map1.png)
+    ![Code_engine_config_map2.png](../../images/Code_engine_config_map2.png)
+    ![Code_engine_config_map3.png](../../images/Code_engine_config_map3.png)
 
 4. Add key value pairs and click `Create` button.
 5. Add newly created config map to your job. Go to Job -> Configuration tab -> Environment variables.
 
-    ![Code_engine_job_config_map.png](../../images/../static/images/Code_engine_job_config_map.png)
+    ![Code_engine_job_config_map.png](../../images/Code_engine_job_config_map.png)
 
     > No need to adding prefix when your env. variables already are prefixed. Otherwise, please add a prefix. Click `Add`.
 
@@ -197,16 +197,16 @@ There are three sources for a job:
 
 1. Go to your project at IBM Cloud Code Engine and click `Create` button on the top, right corner. Select `Source Code` to build container image from source code.
 
-    ![CE_job_config0.png](../../images/../static/images/CE_job_config0.png)
+    ![CE_job_config0.png](../../images/CE_job_config0.png)
 
 2. Select resources that will be consumed every time a job runs. It's good to keep it small as this job won't require significant CPU/RAM and Storage. Keep the rest of the settings as default.
 
-    ![Code_engine_job2.png](../../images/../static/images/Code_engine_job2.png)
+    ![Code_engine_job2.png](../../images/Code_engine_job2.png)
 
 3. Click on the `Specify build details` button. A Sidebar will open with container image build settings. Select a source repository - it should be the repository location where you pushed your function in the previous step. You can optionally provide a branch name. If you do not provide a branch name and you leave the field empty, Code Engine automatically uses the default branch of the specified repository. Click `Next`.
 4. On the next screen, select `Dockerfile` as an option and select your preferred build resources. Leave `Dockerfile` input field as is. Click `Next`.
 
-    ![CE_job_config2.png](../../images/../static/images/CE_job_config2.png)
+    ![CE_job_config2.png](../../images/CE_job_config2.png)
 
 5. On the `Output` screen, select `private.icr.io` as your default Registry Server, leave Registry access secret as is, select a Namespace and provide an image name. Set Tag to `latest`. This way, your image will always end up with the `latest` version. If your registry is private, you must [set up access](https://cloud.ibm.com/docs/codeengine?topic=codeengine-add-registry) to it.
 6. Select an existing **Registry access secret** or create a new one. If you are building your image to an IBM Cloud Container Registry instance that is in your account, you can select `Code Engine managed secret` and let Code Engine create and manage the secret for you.
@@ -214,7 +214,7 @@ There are three sources for a job:
 8. Click **Done**.
 9. Now you should see a summary and you should remember to click `Save` above.
 
-    ![CE_job_config4.png](../../images/../static/images/CE_job_config4.png)
+    ![CE_job_config4.png](../../images/CE_job_config4.png)
 
     > You can also create a job using the terminal CLI like so:
 
@@ -226,7 +226,7 @@ There are three sources for a job:
 
 10. The first Image build will run and it should come back as successful. You will know by looking at the `Build run status`.
 
-    ![CE_job_config5.png](../../images/../static/images/CE_job_config5.png)
+    ![CE_job_config5.png](../../images/CE_job_config5.png)
 
 11. From this moment, whenever you change something in your code, you should push the changes to Github and then you should build the container image again. You can do it by using a CLI command in your terminal.
     ```
@@ -234,7 +234,7 @@ There are three sources for a job:
     ```
 
     The Build Name can be acquired by visiting the `Image Builds` section.
-    ![CE_image_build1 1.png](../../images/../static/images/CE_image_build1.png)
+    ![CE_image_build1 1.png](../../images/CE_image_build1.png)
 
     > Remember! Every time you're building a new image, you're overwriting the previous container image. It is because we're overwriting the `latest` image version.
 
@@ -248,7 +248,7 @@ There are three sources for a job:
     - UI:
 
       Click `Submit Job` from the Job section's top right corner. In the Sidebar, leave instances set to 1 and click `Submit job`.
-      ![CE_job_submit1.png](../../images/../static/images/CE_job_submit1.png)
+      ![CE_job_submit1.png](../../images/CE_job_submit1.png)
 
 13. You can check the Job run status by running:
     ```
@@ -263,18 +263,18 @@ There are three sources for a job:
 ## 5. Create Event subscriptions - cron
 Source - [Getting started with subscriptions](https://cloud.ibm.com/docs/codeengine?topic=codeengine-subscribing-events)
 1. Create Event subscriptions (Create event subscriptions to send events to your application or job consumers.) - click `Create` button.
-    ![[Code_engine_cron1.png]](../../images/../static/images/Code_engine_cron1.png)
-    ![[Code_engine_cron2.png]](../../images/../static/images/Code_engine_cron2.png)
+    ![[Code_engine_cron1.png]](../../images/Code_engine_cron1.png)
+    ![[Code_engine_cron2.png]](../../images/Code_engine_cron2.png)
 
 2.  Select Periodic timer and name the subscription event. Click `Next`.
-    ![[Code_engine_cron3.png]](../../images/../static/images/Code_engine_cron3.png)
+    ![[Code_engine_cron3.png]](../../images/Code_engine_cron3.png)
 3. Set a cron schedule and click `Next`. If you need more information, you can find it here - [Working with the Periodic timer (cron) event producer](https://cloud.ibm.com/docs/codeengine?topic=codeengine-subscribe-cron)
-    ![[Code_engine_cron4.png]](../../images/../static/images/Code_engine_cron4.png)
+    ![[Code_engine_cron4.png]](../../images/Code_engine_cron4.png)
 4. Click `Next` on the next screen.
 5. Select a component that will receive events - the job. Click `Next`.
-    ![[Code_engine_cron5.png]](../../images/../static/images/Code_engine_cron5.png)
+    ![[Code_engine_cron5.png]](../../images/Code_engine_cron5.png)
 6. View the summary page and Click `Create`.
-    ![[Code_engine_cron6.png]](../../images/../static/images/Code_engine_cron6.png)
+    ![[Code_engine_cron6.png]](../../images/Code_engine_cron6.png)
 
     > There's a way to create an event subscription using the CLI:
 
@@ -295,7 +295,7 @@ Source - [Planning your build](https://cloud.ibm.com/docs/codeengine?topic=codee
 3. For Private repos, you will need to access them using an SSH URL instead of an HTTP or HTTPS URL. An example of an SSH URL is 'git@github.com:IBM/CodeEngine.git'.
 4. For Private repos, you will also need the Code repo access. If you can't see any options in the dropdown, it means that you need to create it first on a different page. Go to main Overview of the Project and on the left sidebar, click `Code repo access`. Then, click `Create` button in the top right corner. A new sidebar opens on the right. Enter the name.
 5. For the SSH private key, you will need to copy it from your local machine's `~/.ssh/...` (ex. `cat ~/.ssh/id_ed25519`) and paste it in here. If you don't have one created yet for your Github account, please visit [Generating A New SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and follow the steps.
-    ![CE_code_repo_access1.png](../../images/../static/images/CE_code_repo_access1.png)
+    ![CE_code_repo_access1.png](../../images/CE_code_repo_access1.png)
 
     > You can also update your Git Repo Secret using the CLI like so:
 
@@ -313,7 +313,7 @@ Source - [Planning your build](https://cloud.ibm.com/docs/codeengine?topic=codee
 7. On the next screen I advise you to leave defaults although you may want to use a different Build resources configuration. I recommend starting from the smallest.
 8. On the last screen, choose Registry Server. If you're in the US, I recommend `private.us.icr.io` for the IBM default registry. Your registry can be also the Docker registry. If you have the Registry access secret, please specify. If not, leave the default as `Code Engine managed secret`. Select Namespace or type in your own. Name the Image and tag the builds. I recommend the `latest` for the Tag. Click `Done`.
 9. Click your build configuration from the list. From this screen, you can click on `Submit build` which will build your image and save it into the registry.
-    ![CE_image_build2.png](../../images/../static/images/CE_image_build2.png)
+    ![CE_image_build2.png](../../images/CE_image_build2.png)
 
     > Now, every time you need a new build, you can use your CLI in the terminal like so:
 
