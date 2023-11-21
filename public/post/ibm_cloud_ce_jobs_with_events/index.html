@@ -337,16 +337,16 @@ Environment Variable:  SET &#34;KUBECONFIG=~/.bluemix/plugins/code-engine/Excel 
 </code></pre></li>
 <li>
 <p>Add any environment variables to your project. In the above code we are using <code>process.env.API_KEY</code> therefore <code>API_KEY</code> has to be added into a Config Map as env. variable.</p>
-<p><img src="../../images/../static/images/Code_engine_config_map1.png" alt="Code_engine_config_map1.png">
-<img src="../../images/../static/images/Code_engine_config_map2.png" alt="Code_engine_config_map2.png">
-<img src="../../images/../static/images/Code_engine_config_map3.png" alt="Code_engine_config_map3.png"></p>
+<p><img src="../../images/Code_engine_config_map1.png" alt="Code_engine_config_map1.png">
+<img src="../../images/Code_engine_config_map2.png" alt="Code_engine_config_map2.png">
+<img src="../../images/Code_engine_config_map3.png" alt="Code_engine_config_map3.png"></p>
 </li>
 <li>
 <p>Add key value pairs and click <code>Create</code> button.</p>
 </li>
 <li>
 <p>Add newly created config map to your job. Go to Job -&gt; Configuration tab -&gt; Environment variables.</p>
-<p><img src="../../images/../static/images/Code_engine_job_config_map.png" alt="Code_engine_job_config_map.png"></p>
+<p><img src="../../images/Code_engine_job_config_map.png" alt="Code_engine_job_config_map.png"></p>
 <blockquote>
 <p>No need to adding prefix when your env. variables already are prefixed. Otherwise, please add a prefix. Click <code>Add</code>.</p>
 </blockquote>
@@ -398,18 +398,18 @@ ENTRYPOINT [&#34;node&#34;, &#34;index.js&#34;]
 <ol>
 <li>
 <p>Go to your project at IBM Cloud Code Engine and click <code>Create</code> button on the top, right corner. Select <code>Source Code</code> to build container image from source code.</p>
-<p><img src="../../images/../static/images/CE_job_config0.png" alt="CE_job_config0.png"></p>
+<p><img src="../../images/CE_job_config0.png" alt="CE_job_config0.png"></p>
 </li>
 <li>
 <p>Select resources that will be consumed every time a job runs. It&rsquo;s good to keep it small as this job won&rsquo;t require significant CPU/RAM and Storage. Keep the rest of the settings as default.</p>
-<p><img src="../../images/../static/images/Code_engine_job2.png" alt="Code_engine_job2.png"></p>
+<p><img src="../../images/Code_engine_job2.png" alt="Code_engine_job2.png"></p>
 </li>
 <li>
 <p>Click on the <code>Specify build details</code> button. A Sidebar will open with container image build settings. Select a source repository - it should be the repository location where you pushed your function in the previous step. You can optionally provide a branch name. If you do not provide a branch name and you leave the field empty, Code Engine automatically uses the default branch of the specified repository. Click <code>Next</code>.</p>
 </li>
 <li>
 <p>On the next screen, select <code>Dockerfile</code> as an option and select your preferred build resources. Leave <code>Dockerfile</code> input field as is. Click <code>Next</code>.</p>
-<p><img src="../../images/../static/images/CE_job_config2.png" alt="CE_job_config2.png"></p>
+<p><img src="../../images/CE_job_config2.png" alt="CE_job_config2.png"></p>
 </li>
 <li>
 <p>On the <code>Output</code> screen, select <code>private.icr.io</code> as your default Registry Server, leave Registry access secret as is, select a Namespace and provide an image name. Set Tag to <code>latest</code>. This way, your image will always end up with the <code>latest</code> version. If your registry is private, you must <a href="https://cloud.ibm.com/docs/codeengine?topic=codeengine-add-registry">set up access</a> to it.</p>
@@ -425,7 +425,7 @@ ENTRYPOINT [&#34;node&#34;, &#34;index.js&#34;]
 </li>
 <li>
 <p>Now you should see a summary and you should remember to click <code>Save</code> above.</p>
-<p><img src="../../images/../static/images/CE_job_config4.png" alt="CE_job_config4.png"></p>
+<p><img src="../../images/CE_job_config4.png" alt="CE_job_config4.png"></p>
 <blockquote>
 <p>You can also create a job using the terminal CLI like so:</p>
 </blockquote>
@@ -436,13 +436,13 @@ ENTRYPOINT [&#34;node&#34;, &#34;index.js&#34;]
 </li>
 <li>
 <p>The first Image build will run and it should come back as successful. You will know by looking at the <code>Build run status</code>.</p>
-<p><img src="../../images/../static/images/CE_job_config5.png" alt="CE_job_config5.png"></p>
+<p><img src="../../images/CE_job_config5.png" alt="CE_job_config5.png"></p>
 </li>
 <li>
 <p>From this moment, whenever you change something in your code, you should push the changes to Github and then you should build the container image again. You can do it by using a CLI command in your terminal.</p>
 <pre tabindex="0"><code>ibmcloud ce buildrun submit --build &lt;Build Name&gt;
 </code></pre><p>The Build Name can be acquired by visiting the <code>Image Builds</code> section.
-<img src="../../images/../static/images/CE_image_build1.png" alt="CE_image_build1 1.png"></p>
+<img src="../../images/CE_image_build1.png" alt="CE_image_build1 1.png"></p>
 <blockquote>
 <p>Remember! Every time you&rsquo;re building a new image, you&rsquo;re overwriting the previous container image. It is because we&rsquo;re overwriting the <code>latest</code> image version.</p>
 </blockquote>
@@ -457,7 +457,7 @@ ENTRYPOINT [&#34;node&#34;, &#34;index.js&#34;]
 <li>
 <p>UI:</p>
 <p>Click <code>Submit Job</code> from the Job section&rsquo;s top right corner. In the Sidebar, leave instances set to 1 and click <code>Submit job</code>.
-<img src="../../images/../static/images/CE_job_submit1.png" alt="CE_job_submit1.png"></p>
+<img src="../../images/CE_job_submit1.png" alt="CE_job_submit1.png"></p>
 </li>
 </ul>
 </li>
@@ -475,27 +475,27 @@ ENTRYPOINT [&#34;node&#34;, &#34;index.js&#34;]
 <ol>
 <li>
 <p>Create Event subscriptions (Create event subscriptions to send events to your application or job consumers.) - click <code>Create</code> button.
-<img src="../../images/../static/images/Code_engine_cron1.png" alt="[Code_engine_cron1.png]">
-<img src="../../images/../static/images/Code_engine_cron2.png" alt="[Code_engine_cron2.png]"></p>
+<img src="../../images/Code_engine_cron1.png" alt="[Code_engine_cron1.png]">
+<img src="../../images/Code_engine_cron2.png" alt="[Code_engine_cron2.png]"></p>
 </li>
 <li>
 <p>Select Periodic timer and name the subscription event. Click <code>Next</code>.
-<img src="../../images/../static/images/Code_engine_cron3.png" alt="[Code_engine_cron3.png]"></p>
+<img src="../../images/Code_engine_cron3.png" alt="[Code_engine_cron3.png]"></p>
 </li>
 <li>
 <p>Set a cron schedule and click <code>Next</code>. If you need more information, you can find it here - <a href="https://cloud.ibm.com/docs/codeengine?topic=codeengine-subscribe-cron">Working with the Periodic timer (cron) event producer</a>
-<img src="../../images/../static/images/Code_engine_cron4.png" alt="[Code_engine_cron4.png]"></p>
+<img src="../../images/Code_engine_cron4.png" alt="[Code_engine_cron4.png]"></p>
 </li>
 <li>
 <p>Click <code>Next</code> on the next screen.</p>
 </li>
 <li>
 <p>Select a component that will receive events - the job. Click <code>Next</code>.
-<img src="../../images/../static/images/Code_engine_cron5.png" alt="[Code_engine_cron5.png]"></p>
+<img src="../../images/Code_engine_cron5.png" alt="[Code_engine_cron5.png]"></p>
 </li>
 <li>
 <p>View the summary page and Click <code>Create</code>.
-<img src="../../images/../static/images/Code_engine_cron6.png" alt="[Code_engine_cron6.png]"></p>
+<img src="../../images/Code_engine_cron6.png" alt="[Code_engine_cron6.png]"></p>
 <blockquote>
 <p>There&rsquo;s a way to create an event subscription using the CLI:</p>
 </blockquote>
@@ -526,7 +526,7 @@ ENTRYPOINT [&#34;node&#34;, &#34;index.js&#34;]
 </li>
 <li>
 <p>For the SSH private key, you will need to copy it from your local machine&rsquo;s <code>~/.ssh/...</code> (ex. <code>cat ~/.ssh/id_ed25519</code>) and paste it in here. If you don&rsquo;t have one created yet for your Github account, please visit <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generating A New SSH Key</a> and follow the steps.
-<img src="../../images/../static/images/CE_code_repo_access1.png" alt="CE_code_repo_access1.png"></p>
+<img src="../../images/CE_code_repo_access1.png" alt="CE_code_repo_access1.png"></p>
 <blockquote>
 <p>You can also update your Git Repo Secret using the CLI like so:</p>
 </blockquote>
@@ -547,7 +547,7 @@ ENTRYPOINT [&#34;node&#34;, &#34;index.js&#34;]
 </li>
 <li>
 <p>Click your build configuration from the list. From this screen, you can click on <code>Submit build</code> which will build your image and save it into the registry.
-<img src="../../images/../static/images/CE_image_build2.png" alt="CE_image_build2.png"></p>
+<img src="../../images/CE_image_build2.png" alt="CE_image_build2.png"></p>
 <blockquote>
 <p>Now, every time you need a new build, you can use your CLI in the terminal like so:</p>
 </blockquote>
