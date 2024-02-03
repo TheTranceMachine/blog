@@ -6,8 +6,15 @@
     <description>Recent content on TheTranceMachine&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Nov 2023 14:06:39 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 03 Feb 2024 12:32:15 -0500</lastBuildDate>
     <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Work Wherever Inspiration Strikes</title>
+      <link>https://example.org/post/work-wherever-inspiration-strikes/</link>
+      <pubDate>Sat, 03 Feb 2024 12:32:15 -0500</pubDate>
+      <guid>https://example.org/post/work-wherever-inspiration-strikes/</guid>
+      <description>Work wherever inspiration strikes with SSH and Vim</description>
+    </item>
     <item>
       <title>IBM Cloud Code Engine</title>
       <link>https://example.org/post/ibm_cloud_ce_jobs_with_events/</link>

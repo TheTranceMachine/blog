@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://example.org/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://example.org/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://example.org/css/github.min.css' />
+    <link rel="stylesheet" href='https://example.org/css/github-style.css' />
+    <link rel="stylesheet" href='https://example.org/css/light.css' />
+    <link rel="stylesheet" href='https://example.org/css/dark.css' />
+    <link rel="stylesheet" href='https://example.org/css/syntax.css' />
+    <title>Work Wherever Inspiration Strikes - TheTranceMachine&#39;s blog</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/github.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    <meta name="description"
+  content="Work wherever inspiration strikes with SSH and Vim" />
+<meta name="keywords"
+  content='blog' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://example.org/post/work-wherever-inspiration-strikes/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Work Wherever Inspiration Strikes - TheTranceMachine&#39;s blog" />
+<meta name="twitter:description"
+  content="Work wherever inspiration strikes with SSH and Vim" />
+<meta name="twitter:site" content="https://example.org/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://example.org/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Work Wherever Inspiration Strikes - TheTranceMachine&#39;s blog">
+<meta property="og:description"
+  content="Work wherever inspiration strikes with SSH and Vim" />
+<meta property="og:url" content="https://example.org/post/work-wherever-inspiration-strikes/" />
+<meta property="og:site_name" content="Work Wherever Inspiration Strikes" />
+<meta property="og:image"
+  content="https://example.org/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2024-02-03 12:32:15 -0500 EST" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://example.org/">
+        <svg class="octicon" height="32" viewBox="0 0 16 16" version="1.1" width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd"
+            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+              <input type="hidden" name="q" value="site:https://example.org/">
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://example.org/">
+        <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+          width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+  
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://example.org/">
+                  <img class=" avatar-user"
+                    src="https://example.org/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://example.org/">Greg Smolin</a></span><span
+                    class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
+                      href="https://example.org/post/work-wherever-inspiration-strikes/">Work Wherever Inspiration Strikes</a></strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Sat, 03 Feb 2024 12:32:15 -0500"
+                    class="no-wrap">
+                    Sat, 03 Feb 2024 12:32:15 -0500</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Sat, 03 Feb 2024 12:32:15 -0500"
+                    class="no-wrap">
+                    Sat, 03 Feb 2024 12:32:15 -0500</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      1842 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><p><img src="../../images/vim_header.png" alt="vim.png"></p>
+<h1 id="work-wherever-inspiration-strikes-with-ssh-and-vim">Work wherever inspiration strikes with SSH and Vim</h1>
+<p>A few months ago I was solely focused on writing my code with Visual Studio Code. As you know, this is the number one free IDE currently available. It features an editor based on a powerful Monaco Editor API, a huge number of plugins available for free from the community, and is highly configurable.
+Back then, I didn’t even think of moving to Vim and just thinking that I could one day solely write code with it was inconceivable. Yet, the thought of being capable of writing code with Vim was tempting. The possibility of writing code with flair, in the terminal. Not being held by the virtual hand. The freedom&hellip;</p>
+<p>I sat down and thought of setting up my workstation first. I prefer working on macOS. For the last few months, I&rsquo;ve been working on a Mac Mini. Mini’s can be useful when you don’t necessarily need the retina display and a fancy screen. For the keyboard, I decided to go with a Logitech bluetooth keyboard - K380. It’s particularly useful because it allows seamless switching between 3 connected devices. Here&rsquo;s what I wanted:</p>
+<ul>
+<li>to be able to adjust to the environment I&rsquo;m in at the moment</li>
+<li>to move freely from room to room not carying too much with me</li>
+<li>to switch quickly from a tv screen to a tablet, to a phone</li>
+<li>to be able to code from my bed or from a kitchen table - wherever inspiration strikes.</li>
+</ul>
+<p>I decided to enable SSH on the Mac and use my phone, tablet and Raspberry Pi connected to a TV screen. All bluetooth enabled and connected to K380 keyboard.
+I used Termius app on my phone and tablet to SSH to the Mac. Many Termius features are free and it doesn’t require logging in to use.
+Raspberry Pi is running Raspbian OS from which I can SSH to the Mac using its terminal.</p>
+<p>My first time with Vim was…”OK, this works but I wish it had code coloring and I could indent with a tab. Plus, if I could have code completion…”. You get the idea ;).
+This sent me researching for Vim configurations and I quickly concluded that I could have a pretty comfortable setup (for my standards).</p>
+<p>Let me share my configuration with you. If you think that other plugins should be mentioned here then please add a comment under the article.</p>
+<h2 id="before-all-the-fun-the-manual"><strong>Before all the fun… the manual</strong></h2>
+<p>With every new library, framework, and software comes the manual. Let’s look at some basics of editing files with Vim.</p>
+<h2 id="toggling-the-manual-in-vim">Toggling the manual in Vim</h2>
+<ol>
+<li>Open a new file with Vim in your terminal - <code>vim &lt;your-file.ex&gt;</code></li>
+<li>Press <code>i</code> on your keyboard. This will enable <em>editing mode</em>. This is when you can edit the file.</li>
+<li>Press <code>F1</code> on your keyboard. This will open the manual. You can move up and down with arrow keys.</li>
+<li>Write <code>:q</code> to close the manual.</li>
+</ol>
+<h2 id="from-the-manual---basics---move-around">(From the manual) - basics - move around</h2>
+<pre tabindex="0"><code>VIM - main help file
+ 
+Move around: Use the cursor keys, or &#34;h&#34; to go left, &#34;j&#34; to go down, &#34;k&#34; to
+go up, &#34;l&#34; to go right.
+Close this window: Use &#34;:q&lt;Enter&gt;&#34;.
+Get out of Vim: Use &#34;:qa!&lt;Enter&gt;&#34; (careful, all changes are lost!).
+Jump to a subject: Position the cursor on a tag (e.g. |bars|) and hit CTRL-].
+With the mouse: &#34;:set mouse=a&#34; to enable the mouse (in xterm or GUI).
+Double-click the left mouse button on a tag, e.g. |bars|.
+Jump back: Type CTRL-O. Repeat to go further back.
+</code></pre><h2 id="from-the-manual---basics---help">(From the manual) - basics - help</h2>
+<pre tabindex="0"><code>Get specific help: It is possible to go directly to whatever you want help on, by giving an argument to the |:help| command. Prepend something to specify the context: *help-context*
+</code></pre><table>
+<thead>
+<tr>
+<th>WHAT</th>
+<th>PREPEND</th>
+<th>EXAMPLE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal mode command</td>
+<td></td>
+<td><code>:help x</code></td>
+</tr>
+<tr>
+<td>Visual mode command</td>
+<td>v_</td>
+<td><code>:help v_u</code></td>
+</tr>
+<tr>
+<td>Insert mode command</td>
+<td>i_</td>
+<td><code>:help i_&lt;Esc&gt;</code></td>
+</tr>
+<tr>
+<td>Command-line command</td>
+<td>:</td>
+<td><code>:help :quit</code></td>
+</tr>
+<tr>
+<td>Command-line editing</td>
+<td>c_</td>
+<td><code>:help c_&lt;Del&gt;</code></td>
+</tr>
+<tr>
+<td>Vim command argument</td>
+<td>-</td>
+<td><code>:help -r</code></td>
+</tr>
+<tr>
+<td>Option</td>
+<td>'</td>
+<td><code>:help 'textwidth'</code></td>
+</tr>
+<tr>
+<td>Regular expression</td>
+<td>/</td>
+<td><code>:help /[</code></td>
+</tr>
+</tbody>
+</table>
+<pre tabindex="0"><code>See |help-summary| for more contexts and an explanation.
+See |notation| for an explanation of the help syntax.
+Search for help:  Type &#34;:help word&#34;, then hit CTRL-D to see matching help entries for &#34;word&#34;. Or use &#34;:helpgrep word&#34;. |:helpgrep|
+</code></pre><h2 id="vimtutor">Vimtutor</h2>
+<p>You can practice using Vim thanks to an interactive tutorial. You can access it with the following command from the terminal:</p>
+<pre tabindex="0"><code>vimtutor
+</code></pre><h2 id="configuring-vim-with-vimrc"><strong>Configuring Vim with <code>.vimrc</code></strong></h2>
+<h2 id="before-we-begin">Before we begin&hellip;</h2>
+<p>After adding configuration in <code>.vimrc</code>, if you want it to take effect immediately, take the following steps:</p>
+<ol>
+<li>Press <code>Esc</code> (exits the Editing mode into Normal mode).</li>
+<li>Save the file by writing the following command in the Normal mode and pressing Enter:</li>
+</ol>
+<pre tabindex="0"><code>:w
+</code></pre><ol start="3">
+<li>Write the following command in the Normal mode and press Enter:</li>
+</ol>
+<pre tabindex="0"><code>:source ~/.vimrc
+</code></pre><p>After the above steps, you should see the effects taking change. If in doubt, exit <code>.vimrc</code> and open another file (with more code) using Vim - <code>vim &lt;new-file.ex&gt;</code>.</p>
+<h2 id="1-create-vimrc">1. Create <code>~/.vimrc</code></h2>
+<pre tabindex="0"><code>touch ~/.vimrc
+vim ~/.vimrc 
+</code></pre><h2 id="2-enable-vim-default-code-coloring">2. Enable Vim default code coloring</h2>
+<p>Add the following to your <code>.vimrc</code>. Enter the edition mode by pressing <code>i</code> and add:</p>
+<pre tabindex="0"><code>syntax on
+</code></pre><h2 id="3-editing-files---shortcuts">3. Editing Files - shortcuts</h2>
+<p>Editing with Vim is not an easy matter. You should know Three most important key mappings that I use when editing files:</p>
+<pre tabindex="0"><code>nnoremap &lt;F1&gt; :w&lt;CR&gt;         
+nnoremap &lt;F2&gt; :q&lt;CR&gt;
+</code></pre><h3 id="key-mapping-explanation">Key mapping explanation:</h3>
+<ul>
+<li><code>nnoremap</code> – Allows you to map keys in normal mode.</li>
+<li><code>inoremap</code> – Allows you to map keys in insert mode.</li>
+<li><code>vnoremap</code> – Allows you to map keys in visual mode.</li>
+</ul>
+<p><code>nnoremap &lt;F1&gt; :w&lt;CR&gt;</code> - Map file saving command (:w) to F1 key.
+<code>nnoremap &lt;F2&gt; :q&lt;CR&gt;</code> - Map exiting a file (:q) to F2 key.</p>
+<h2 id="4-split-view---key-bindings">4. Split view - key bindings</h2>
+<pre tabindex="0"><code>&#34; You can split the window in Vim by typing :split or :vsplit.
+“ Horizontal window split key binding: CTRL+w+s
+“ Vertical window split key binding: CTRL+w+v
+&#34; Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
+nnoremap &lt;c-j&gt; &lt;c-w&gt;j
+nnoremap &lt;c-k&gt; &lt;c-w&gt;k
+nnoremap &lt;c-h&gt; &lt;c-w&gt;h
+nnoremap &lt;c-l&gt; &lt;c-w&gt;l
+</code></pre><h2 id="5-split-view---resize-window---key-bindings">5. Split View - resize window - key bindings</h2>
+<pre tabindex="0"><code>&#34; Resize split windows using arrow keys by pressing:
+&#34; CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
+noremap &lt;c-up&gt; &lt;c-w&gt;+
+noremap &lt;c-down&gt; &lt;c-w&gt;-
+noremap &lt;c-left&gt; &lt;c-w&gt;&gt;
+noremap &lt;c-right&gt; &lt;c-w&gt;&lt;
+</code></pre><h2 id="6-set-the-encoding-to-utf-8">6. Set the encoding to UTF-8</h2>
+<p><code>'encoding'</code> sets how vim shall represent characters internally. Utf-8 is necessary for most flavors of Unicode.</p>
+<pre tabindex="0"><code>set encoding=utf-8
+</code></pre><h2 id="7-add-status-line-to-the-bottom-of-the-screen">7. Add status line to the bottom of the screen</h2>
+<p>The advantage of having the status line displayed always is, that you can see the current mode, file name, file status, ruler, etc.</p>
+<pre tabindex="0"><code>set laststatus=2
+</code></pre><h2 id="8-override-default-backspace-behavior">8. Override default backspace behavior</h2>
+<p>By default, Vim doesn&rsquo;t let you erase with backspace. Override this behavior with:</p>
+<pre tabindex="0"><code>set backspace=2
+</code></pre><h2 id="9--show-line-numbers">9 . Show line numbers</h2>
+<p>Display line numbers on the left side of the window.</p>
+<pre tabindex="0"><code>set number
+</code></pre><h2 id="10-enable-horizontal-cursor-line-and-highlight-it">10. Enable horizontal cursor line and highlight it</h2>
+<p>As in VSC, the cursor line helps you to navigate the code.</p>
+<pre tabindex="0"><code>set cursorline
+</code></pre><h2 id="11-highlight-cursor-line">11. Highlight cursor line</h2>
+<p>The line is very basic but we can add a background color to it:</p>
+<pre tabindex="0"><code>hi CursorLine ctermbg=8 
+</code></pre><p><code>ctermbg=8</code> - change background color
+<code>ctermfg=White</code> - change foreground color
+<code>cterm=bold</code> - change font weight</p>
+<h2 id="12-set-tab-size-to-2">12. Set tab size to 2</h2>
+<p>When using Tab, you can set this up to 2 or 4 spaces</p>
+<pre tabindex="0"><code>set tabstop=2
+</code></pre><h2 id="13-indention-size">13. Indention size</h2>
+<p>Whenever you start writing a function, Vim will automatically indent the new line inside the function.</p>
+<pre tabindex="0"><code>set shiftwidth=2
+</code></pre><h2 id="14-tell-vim-not-to-create-backup-files">14. Tell Vim not to create backup files</h2>
+<p>If <code>backup</code> is enabled, then <em>before</em> writing the file, Vim will create a backup (location depends on the <code>backupdir</code> setting). Afterwards, Vim will attempt to write the original file. At this point, behavior depends on the <code>backup</code> setting:</p>
+<ul>
+<li>If <code>nobackup</code>, then the backup file is <strong>immediately deleted</strong> upon successfully writing the original file.</li>
+<li>If <code>backup</code>, then the backup file is <strong>kept</strong> afterwards and will be overwritten on future backups.</li>
+</ul>
+<pre tabindex="0"><code>set nobackup
+</code></pre><h2 id="15-do-not-let-the-cursor-scroll-below-or-above-n-number-of-lines">15. Do not let the cursor scroll below or above N number of lines</h2>
+<p>When scrolling or searching through a large file, it can be convenient to keep the cursor line near the middle of the screen (vertically centered within the window).</p>
+<pre tabindex="0"><code>set scrolloff=10
+</code></pre><h2 id="16-do-not-wrap-lines-allow-long-lines-to-extend-as-far-as-the-line-goes">16. Do not wrap lines. Allow long lines to extend as far as the line goes</h2>
+<pre tabindex="0"><code>set nowrap
+</code></pre><h2 id="17-incrementally-highlight-matching-characters-as-you-search">17. Incrementally highlight matching characters as you search</h2>
+<p>Use the regular search command <code>/</code> and it will move the highlight as you add characters to the search string.</p>
+<pre tabindex="0"><code>set incsearch
+</code></pre><h2 id="18-ignore-capital-letters-during-the-search">18. Ignore capital letters during the search</h2>
+<pre tabindex="0"><code>set ignorecase
+</code></pre><h2 id="19-show-matching-words-during-the-search">19. Show matching words during the search</h2>
+<pre tabindex="0"><code>set showmatch
+</code></pre><h2 id="20-use-highlighting-when-doing-a-search">20. Use highlighting when doing a search</h2>
+<pre tabindex="0"><code>set hlsearch
+</code></pre><h2 id="now-for-the-big-stuff---plugins"><strong>Now for the big stuff - plugins</strong></h2>
+<h2 id="1-install-vim-plugged">1. Install Vim Plugged</h2>
+<p>First and foremost. You need a plugin manager for Vim. This will allow you to install and configure plugins. Instructions on how to do that are <a href="https://github.com/junegunn/vim-plug">here</a>.</p>
+<h2 id="2-enable-onedark-color-scheme">2. Enable OneDark color scheme</h2>
+<p>Add OneDark plugin to your plugins list:</p>
+<pre tabindex="0"><code>call plug#begin(&#39;~/.vim/plugged&#39;)
+Plug &#39;joshdick/onedark.vim&#39;
+call plug#end()
+</code></pre><p>To install the plugin, exit the edition mode (key binding <code>F1</code>) and write <code>:PlugInstall</code>
+A new tab will open, when the installs are done, you can close the tab by writing <code>:q</code> command or using key binding <code>F2</code>.</p>
+<p>Enable OneDark color scheme by adding these two lines to the bottom of your <code>.vimrc</code>:</p>
+<pre tabindex="0"><code>colorscheme onedark
+</code></pre><p>😎</p>
+<h2 id="3-introduce-nerdtree-navigation-sidebar">3. Introduce NERDtree navigation sidebar</h2>
+<p><a href="https://github.com/preservim/nerdtree">preservim/nerdtree</a></p>
+<p>Add <code>Plug 'preservim/nerdtree'</code> in your plugin list, like so:</p>
+<pre tabindex="0"><code>call plug#begin(&#39;~/.vim/plugged&#39;)
+Plug &#39;preservim/nerdtree&#39;
+call plug#end()
+</code></pre><p>Add key binding below:</p>
+<pre tabindex="0"><code>nnoremap &lt;F3&gt; :NERDTreeToggle&lt;CR&gt;
+</code></pre><p><code>nnoremap &lt;F3&gt; :NERDTreeToggle&lt;CR&gt;</code> - toggle NERDTree with F3 key.</p>
+<h2 id="4-enable-code-completion">4. Enable code completion</h2>
+<p><a href="https://github.com/ycm-core/YouCompleteMe">YouCompleteMe</a></p>
+<p>Add <code>Plug 'ycm-core/YouCompleteMe'</code> in your plugin list, like so:</p>
+<pre tabindex="0"><code>call plug#begin(&#39;~/.vim/plugged&#39;)
+Plug &#39;ycm-core/YouCompleteMe&#39;
+call plug#end()
+</code></pre><p>Follow the installation on MacOs <a href="https://github.com/ycm-core/YouCompleteMe?tab=readme-ov-file#macos">here</a>
+When installed properly, you should see hints/code completion dropdown when you write code!</p>
+<h2 id="5-enhance-status-line-with-more-information">5. Enhance status line with more information</h2>
+<p><a href="https://github.com/vim-airline/vim-airline">vim-airline/vim-airline</a>
+Remember when we added the status line in the steps above? It&rsquo;s time to enhance it :)</p>
+<p>Add <code>Plug 'vim-airline/vim-airline'</code> in you plugin list, like so:</p>
+<pre tabindex="0"><code>call plug#begin(&#39;~/.vim/plugged&#39;)
+Plug &#39;vim-airline/vim-airline&#39;
+call plug#end()
+</code></pre><h2 id="6-enable-support-for-multiple-programming-languages">6. Enable support for multiple programming languages</h2>
+<p><a href="https://github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a>
+If you write code in two or more languages then you need Vim to support its syntax and indentation.</p>
+<p>Add <code>Plug 'sheerun/vim-polyglot'</code> in your plugin list, like so:</p>
+<pre tabindex="0"><code>call plug#begin(&#39;~/.vim/plugged&#39;)
+Plug &#39;sheerun/vim-polyglot&#39;
+call plug#end()
+</code></pre><p>You will see a hint/documentation window when you move your cursor over a specific part of the code in Normal mode. It&rsquo;s disabled in Editing mode. Ahh, just like in VSC&hellip;but better!</p>
+<h3 id="7-add-working-with-git-from-vims-command-line">7. Add working with Git from Vim&rsquo;s command line</h3>
+<p><a href="https://github.com/tpope/vim-fugitive">Trope/vim-fugitive</a>
+This is a Git wrapper for Vim&rsquo;s command line making it easier to work with. Vim has built-in git commands but this plugin offers more control.</p>
+<p>Add <code>Plug 'tpope/vim-fugitive'</code> in your plugin list, like so:</p>
+<pre tabindex="0"><code>call plug#begin(&#39;~/.vim/plugged&#39;)
+Plug &#39;tpope/vim-fugitive&#39;
+call plug#end()
+</code></pre><h2 id="summary">Summary</h2>
+<p>The above list is far from complete. I want to mention <a href="https://github.com/SirVer/ultisnips">Ultisnips</a> which is the ultimate solution for snippets in Vim and <a href="https://github.com/tpope/vim-commentary">Vim-commentary</a> which helps with commenting stuff out.
+I&rsquo;m sure that you know many plugins that can make a developer&rsquo;s life easier. Please share those in the comments section below. I would much appreciate your input.</p>
+<h2 id="resources">Resources:</h2>
+<p><a href="https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/">FreeCodeCamp</a></p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://example.org/js/toc.js'></script>
+<link rel="stylesheet" href='https://example.org/css/toc.css' />
+
+<div id="gitalk-container" class="gitalk-container"></div>
+<link rel="stylesheet" href='https://example.org/css/gitalk.css'>
+<script src='https://example.org/js/gitalk.min.js'></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'HUGO_GITALK_ID',
+    clientSecret: 'HUGO_GITALK_SECRET',
+    repo: 'blog',
+    owner: 'TheTranceMachine',
+    admin: ['TheTranceMachine'],
+    id: eval("location.pathname"), 
+    distractionFreeMode: false 
+  });
+  (function() {
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://example.org/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+</body>
+
+<script type="application/javascript" src="https://example.org/js/github-style.js"></script>
+
+
+
+
+</html>
